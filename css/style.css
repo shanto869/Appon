@@ -1,0 +1,1189 @@
+:root {
+	--mainfont: 'Raleway', sans-serif;
+	--subfont: 'Open Sans', sans-serif;
+	--brand: #744fa0;
+	--banover: ;
+	--headingcolor: #353535;
+	--pcolor: #555555;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	vertical-align: middle;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+/* ==================
+	common css ends 
+ ====================*/
+.pos-rel {
+	position: relative;
+}
+
+ .pos-abs {
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ }
+
+ .txt-upper {
+ 	text-transform: uppercase;
+ }
+
+ .txt-cap {
+ 	text-transform: capitalize;
+ }
+
+ .txt-center {
+ 	text-align: center;
+ }
+
+ .color-w {
+ 	color: white;
+ }
+
+ .head-color {
+ 	color: var(--headingcolor);
+ }
+
+ .p-color {
+ 	color: var(--pcolor);
+ }
+
+ .brand-back {
+ 	background: var(--brand);
+ }
+
+ .icon-back {
+ 	background: #1da1f2;
+ }
+
+ .rel-bold {
+ 	font-family: var(--mainfont);
+ 	font-weight: 700;
+ }
+
+ .rel-light {
+ 	font-family: var(--mainfont);
+ 	font-weight: 300;
+ }
+
+ .open-reg {
+ 	font-family: var(--subfont);
+ 	font-weight: 400;
+ }
+
+ .open-bold {
+ 	font-family: var(--subfont);
+ 	font-weight: 700;
+ }
+
+ .font-s-14 {
+ 	font-size: 14px;
+ }
+
+ /* typography css ends */
+
+
+ .heading-text h5{
+    color: #353535;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Raleway',sans-serif;
+}
+
+.heading{
+    width: 140px;
+    height: 22px;
+    margin: auto;
+    display: flex;
+}
+
+.heading #heading_line{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.heading .heading_line{
+    width: 55px;
+    height: 4px;
+    margin: auto;
+}
+
+.heading .heading_line .line-1{
+    width: 44px;
+    height: 1px;
+    background: #353535;
+    margin-bottom: 2px;
+}
+
+.heading .heading_line .line-2{
+    width: 49px;
+    height: 1px;
+    background: #353535;
+}
+
+.mr54{
+    margin-right: 54px;
+}
+
+/* ==================================
+    heading common css in flex ends
+================================== */
+
+
+nav {
+    width: 100%;
+    height: 135px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+}
+
+nav .navbar {
+    height: 135px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .navbar .nav-logo {
+    width: 230px;
+    height: 135px;
+}
+
+nav .navbar .nav-logo a img {
+    margin-top: 60px;
+}
+
+nav .navbar .nav-list {
+    width: 600px;
+    height: 135px;
+}
+
+nav .navbar .nav-list ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+
+nav .navbar .nav-list ul li a {
+   color: white;
+   font-size: 14px;
+   text-transform: capitalize;
+   transition: all linear .3s;
+   position: relative;
+}
+
+nav .navbar .nav-list ul .li a:hover {
+   color: var(--brand);
+}
+
+nav .navbar .nav-list ul .li a::after {
+   content: '';
+   width: 0;
+   height: 2px;
+   background: var(--brand);
+   position: absolute;
+   bottom: -8px;
+   left: 0;
+   opacity: 0;
+   transition: all linear .4s;
+}
+
+nav .navbar .nav-list ul .li a:hover::after {
+   width: 100%;
+   opacity: 1;
+}
+
+nav .navbar .nav-list ul a.active {
+    font-size: 14px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    background: var(--brand);
+    border-radius: 5px;
+    transition: all linear .3s;
+}
+
+nav .navbar .nav-list ul a.active:hover {
+    color: var(--brand);
+    background: #ddd;
+}
+
+ /* ===================
+    nav css ends 
+   =================== */
+#banner {
+    height: 700px;
+    background: url('../images/banner.jpg') no-repeat center / cover;
+    position: relative;
+    z-index: 1;
+}
+
+#banner img {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    z-index: 1;
+    
+}
+
+#banner::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#banner .banner-icon {
+    position: absolute;
+    top: 295px;
+    right: 0;
+    z-index: 999;
+}
+
+#banner .banner-icon ul li {
+    padding-top: 30px;
+}
+
+#banner .banner-icon ul li i {
+    color: white;
+    transition: all linear .3s;
+}
+
+#banner .banner-icon  ul li i.active {
+    color: var(--brand);
+}
+
+#banner .banner-icon  ul li i:hover {
+    color: var(--brand);
+}
+
+#banner .banner-text {
+    height: 100%;
+    text-align: right;
+    position: relative;
+    z-index: 999;
+}
+
+#banner .banner-text h1 {
+    font-size: 56px;
+    padding-top: 243px;
+    padding-bottom: 8px;
+}
+
+#banner .banner-text h1 span {
+    color: var(--brand);
+}
+
+#banner .banner-text .p {
+    font-size: 32px;
+    padding-bottom: 25px;
+}
+
+#banner .banner-text .line {
+    width: 200px;
+    height: 1px;
+    background: white;
+    position: absolute;
+    right: 0;
+}
+
+#banner .banner-text .para {
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 700px;
+    margin-top: 25px;
+    margin-bottom: 60px;
+}
+
+#banner .banner-text .button {
+    width: 390px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#banner .banner-text .button .btn {
+    width: 190px;
+    height: 60px;
+    background: white;
+    text-align: left;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap; 
+    transition: all linear .3s;
+}
+
+#banner .banner-text .button .btn i {
+    font-size: 33px;
+    line-height: 60px;
+    padding-left: 15px;
+}
+
+#banner .banner-text .button .btn h4 {
+    font-size: 14px;
+    padding-left: 13px;
+    padding-top: 8px;
+}
+
+#banner .banner-text .button .btn h3 {
+    font-size: 18px;
+    margin-top: -32px;
+    padding-left: 64px;
+}
+
+#banner .banner-text .button .btn .a {
+    font-size: 18px;
+    margin-top: -32px;
+    padding-left: 53px;
+}
+
+#banner .banner-text .button .btn:hover {
+    color: white;
+    background: var(--brand);
+}
+
+/* ===================
+    banner css ends 
+ =================== */
+
+#about {
+    width: 100%;
+    height: 342px;
+    margin-top: 100px;
+}
+
+#about .about-content {
+    height: 342px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#about .about-content .about-text { 
+    width: 570px;
+    height: 342px;
+    margin-left: 100px;
+    text-align: center;
+}
+
+#about .about-content .about-text h5 { 
+    margin-top: 50px;
+}
+
+#about .about-content .about-text p { 
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 5px;
+    padding-top: 25px;
+}
+
+#about .about-content .about-img {
+    width: 370px;
+    height: 342px;
+}
+
+#about .about-content .about-img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===================
+    about css ends 
+ =================== */
+
+#feature {
+    width: 100%;
+    height: 652px;
+    background: #f1f1f1;
+    margin-top: 100px;
+}
+
+#feature .features {
+    height: 652px;
+}
+
+#feature .features .feat-heading {
+    width: 100%;
+    height: 126px;
+}
+
+#feature .features .feat-heading h5 {
+    padding-top: 50px;
+}
+
+#feature .features .feat-content {
+    width: 100%;
+    height: 480px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#feature .features .feat-content .feat-icon {
+    width: 370px;
+    height: 480px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#feature .features .feat-content .feat-icon .feat-icon-item {
+    width: 100%;
+    height: 90px;
+    position: relative;
+    transition: all linear .3s;
+}
+
+#feature .features .feat-content .feat-icon .feat-icon-item a i {
+    font-size: 42px;
+    color: var(--headingcolor);
+    line-height: 90px;
+    transition: all linear .3s;
+}
+
+#feature .features .feat-content .feat-icon .feat-icon-item:hover a i {
+   color: var(--brand);
+}
+
+
+#feature .features .feat-content .feat-icon .feat-icon-item a h5 {
+    font-size: 18px;
+    position: absolute;
+    top: 22px;
+    left: 63px;
+    transition: all linear .3s;
+}
+
+#feature .features .feat-content .feat-icon .feat-icon-item:hover a h5 {
+    color: var(--brand);
+}
+
+#feature .features .feat-content .feat-icon .feat-icon-item a p {
+    font-size: 14px;
+    position: absolute;
+    top: 46px;
+    left: 63px;
+    transition: all linear .3s;
+}
+
+#feature .features .feat-content .feat-icon .feat-icon-item:hover a p {
+    color: var(--brand);
+}
+
+#feature .features .feat-content .feat-icon .feat-icon-item::after {
+    content: '';
+    width: 270px;
+    height: 2px;
+    background: var(--headingcolor);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all linear .3s;
+}
+
+#feature .features .feat-content .feat-icon .feat-icon-item:hover::after {
+   width: 100%;
+   color: var(--brand);
+}
+
+#feature .features .feat-content .feat-img {
+    width: 370px;
+    height: 480px;
+    text-align: center;
+}
+
+#feature .features .feat-content .feat-text {
+    width: 370px;
+    height: 480px;
+    text-align: right;
+}
+
+#feature .features .feat-content .feat-text h6 {
+    font-size: 18px;
+    margin-top: 122px;
+}
+
+#feature .features .feat-content .feat-text p {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--pcolor);
+    padding-top: 22px;
+}
+
+ /* ===================
+    our features css ends 
+ =================== */
+
+#screenshots {
+    width: 100%;
+    height: 645px;
+}
+
+#screenshots h5 {
+    padding-top: 90px;
+}
+
+#screenshots .screenshot {
+    height: 645px;
+    text-align: center;
+}
+
+#screenshots .screenshot .img {
+    width: 100%;
+    height: 350px;  
+    margin-top: 55px;
+    margin-bottom: 30px;
+}
+
+#screenshots .screenshot .img img {
+    height: 100%;  
+}
+
+#screenshots .screenshot ul {
+    display: flex;
+    justify-content: center;
+}
+
+#screenshots .screenshot ul li i {
+    color: var(--headingcolor);
+    font-size: 20px;
+    padding-right: 10px;
+    transition: all linear .3s;
+}
+
+#screenshots .screenshot ul li i:hover {
+    color: var(--brand);
+}
+
+ /* ===================
+    our features css ends 
+ =================== */
+
+#watch-video {
+    height: 650px;
+    width: 100%;
+}
+
+#watch-video .watch-video {
+    height: 650px;
+}
+
+#watch-video .watch-video h5 {
+    padding-top: 30px;
+}
+
+#watch-video .watch-video .video-img {
+    width: 100%;
+    height: 500px;
+    background: url('../images/video-img.jpg') no-repeat center / cover;
+    position: relative;
+    margin-top: 60px;
+}
+
+#watch-video .watch-video .video-img::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+#watch-video .watch-video .video-img a i {
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f1f1f1;
+    font-size: 80px;
+    font-weight: 400;
+}
+
+
+ /* ===================
+    our features css ends 
+ =================== */
+
+#pricing-plan {
+    width: 100%;
+    height: 525px;
+    margin-top: 90px;
+    margin-bottom: 100px;
+}
+
+#pricing-plan h5 {
+   
+}
+
+#pricing-plan .pricing-items {
+    height: 405px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+#pricing-plan .pricing-items .card-item {
+    width: 270px;
+    height: 405px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 0px 19px -14px;
+    transition: all linear .3s;
+}
+
+#pricing-plan .pricing-items .card-item:hover {
+    box-shadow: 0px 0px 19px -9px;
+}
+
+#pricing-plan .pricing-items .card-item .part-1 {
+    width:270px;
+    height: 60px;
+    background: #f1f1f1; 
+    transition: all linear .3s;
+    border-radius: 5%;
+}
+
+#pricing-plan .pricing-items .card-item:hover .part-1 {
+    width:270px;
+    height: 60px;
+    background: var(--brand); 
+}
+
+#pricing-plan .pricing-items .card-item .part-1 h5 {
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+    transition: all linear .3s;
+}
+
+#pricing-plan .pricing-items .card-item:hover .part-1 h5 {
+    color: white;
+}
+
+#pricing-plan .pricing-items .card-item .part-2 {
+    width: 270px;
+    height: 160px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pricing-plan .pricing-items .card-item .part-2 .circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    border: 3px solid #3b5d7c;
+    box-sizing: border-box; 
+}
+
+#pricing-plan .pricing-items .card-item .part-2 .circle h6 {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+#pricing-plan .pricing-items .card-item .part-2 .circle h6 span {
+    font-size: 45px;
+}
+
+#pricing-plan .pricing-items .card-item .part-2 .circle p {
+    font-size: 15px;
+}
+
+#pricing-plan .pricing-items .card-item .part-3  {
+    width: 270px;
+    height: 185px;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border-radius: 5%;  */
+}
+
+#pricing-plan .pricing-items .card-item .part-3 ul li {
+    font-size: 14px;
+    color: var(--pcolor);
+    text-transform: capitalize;
+    line-height: 30px;
+}
+
+#pricing-plan .pricing-items .card-item .part-3 .btn {
+    width: 94px;
+    height: 36px;
+    background: white;
+    border: 1px solid #3b5d7c;
+    box-sizing: border-box;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -18px;
+    left: 88px;
+}
+
+#pricing-plan .pricing-items .card-item .part-3 .btn a {
+    font-size: 14px;
+    width: 94px;
+    height: 36px;
+    display: inline-block;
+    line-height: 36px;
+    transition: all linear .3s;
+}
+
+#pricing-plan .pricing-items .card-item:hover .part-3 .btn a {
+    color: white;
+    background: var(--brand);
+}
+
+ /* ===================
+    pricing-plan css ends 
+ =================== */
+
+#team {
+    width: 100%;
+    height: 660px;
+}
+
+#team .team-heading {
+    width: 100%;
+    height: 110px;
+}
+
+#team .team-member {
+    height: 550px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#team .team-member .member-1 {
+    width: 370px;
+    height: 550px;
+    border-radius: 10px;
+}
+
+#team .team-member .member-1 .member-img {
+    width: 370px;
+    height: 370px;
+    position: relative;
+    border-radius: 10px;
+    top: 82px;
+    left: 0;
+    z-index: 99;
+    transition: all linear .4s;
+    box-shadow: 0px 0px 19px -14px;
+}
+
+#team .team-member .member-1 .member-img:hover {
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+#team .team-member .member-1 .member-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#team .team-member .member-1 .member-img .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all linear .3s;
+}
+
+#team .team-member .member-1 .member-img:hover .overlay {
+    opacity: 1;
+}
+
+
+#team .team-member .member-1 .member-img .overlay ul {
+    height: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#team .team-member .member-1 .member-img .overlay ul li {
+    padding: 0 5px;
+}
+
+#team .team-member .member-1 .member-img .overlay ul li i {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: var(--headingcolor);
+    font-size: 24px;
+    transition: all linear .3s;
+}
+
+#team .team-member .member-1 .member-img .overlay ul li i:hover {
+    color: white;
+    background: #1da1f2;
+} 
+
+#team .team-member .member-1 .member-intro {
+    width: 370px;
+    height: 180px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    bottom: 100px;
+    left: 0;
+    transition: all linear .4s;
+}
+
+#team .team-member .member-1:hover .member-intro {
+    box-shadow: 0px 0px 19px -14px;
+    bottom: 0;
+    left: 0;
+}
+
+#team .team-member .member-1 .member-intro h6 {
+    font-size: 18px;
+    padding-top: 25px;
+    padding-bottom: 8px;
+}
+
+#team .team-member .member-1 .member-intro p:first-child {
+    font-size: 14px;
+}
+
+#team .team-member .member-1 .member-intro p:last-child {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 68px;
+    padding-top: 14px;
+}
+
+
+ /* ===================
+    awesome team css ends 
+ =================== */
+
+
+#feedback {
+    width: 100%;
+    height: 665px;
+    margin-top: 90px;
+}
+
+#feedback .feedback {
+    height: 665px;
+}
+
+#feedback .feedback .feedback-heading {
+    width: 100%;
+    height: 115px;
+}
+
+#feedback .feedback .feedback-bg {
+    width: 100%;
+    height: 550px;
+    background: url('../images/feedback-banner.jpg') no-repeat center / cover;
+    position: relative;
+}
+
+#feedback .feedback .feedback-bg::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .7);
+    z-index: 1;
+}
+
+
+#feedback .feedback .feedback-bg .feedback-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#feedback .feedback .feedback-bg .feedback-content .description {
+    width: 800px;
+    height: 218px;
+    background: #f1f1f1;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 9;
+    margin-top: 40px;
+}
+
+#feedback .feedback .feedback-bg .feedback-content .description p:first-child {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 25px 65px;
+}
+
+
+#feedback .feedback .feedback-bg .feedback-content .description .ratings i {
+    font-size: 14px;
+    color: var(--brand);
+    padding-bottom: 5px;
+}
+
+#feedback .feedback .feedback-bg .feedback-content .description h6 {
+    font-size: 18px;
+}
+
+#feedback .feedback .feedback-bg .feedback-content .description::after {
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 5;
+}
+
+#feedback .feedback .feedback-bg .feedback-content .descript-img {
+    width: 100%;
+    height: 200px;
+    z-index: 99;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#feedback .feedback .feedback-bg .feedback-content .descript-img .img-1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+}
+
+#feedback .feedback .feedback-bg .feedback-content .descript-img .img-1::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, .2);
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+#feedback .feedback .feedback-bg .feedback-content .descript-img .img-2 {
+    width: 150px;
+    height: 150px;
+    margin: 0 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#feedback .feedback .feedback-bg .feedback-content .user-round {
+    position: absolute;
+    z-index: 99999999;
+    bottom: 20px;
+    left: 47%;
+}
+
+#feedback .feedback .feedback-bg .feedback-content .user-round a i {
+  font-size: 20px;
+  color: white;
+  padding: 0 3px;
+  transition: all linear .3s;
+}
+
+#feedback .feedback .feedback-bg .feedback-content .user-round a i:hover {
+  color: var(--brand);
+}
+
+ /* ===================
+   user-feedback css ends 
+ =================== */
+
+#get-in-touch {
+    width: 100%;
+    height: 460px;
+    margin-top: 90px;
+}
+
+#get-in-touch .get-in-touch {
+    height: 100%;
+}
+
+#get-in-touch .get-in-touch .content {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
+
+#get-in-touch .get-in-touch .content form div {
+    height: 52px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 58px;
+    margin-bottom: 28px;
+}
+
+#get-in-touch .get-in-touch .content form input {
+    width: 355px;
+    height: 50px;
+    border: 1px solid #718a71;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: none;
+    padding: 0 10px;  
+}
+
+#get-in-touch .get-in-touch .content form ::placeholder {
+    color: #555555;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--subfont);
+    text-transform: capitalize; 
+}
+
+#get-in-touch .get-in-touch .content form textarea {
+    height: 200px;
+    width: 100%;
+    border: 1px solid #718a71;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+#get-in-touch .get-in-touch .content form input.send-btn {
+    width: 90px;
+    height: 35px;
+    background: var(--brand);
+    color: white;
+    font-size: 18px;
+    transition: all linear .4s;
+    border-radius: 5px;
+    margin-top: 27px;
+}
+
+#get-in-touch .get-in-touch .content form input.send-btn:hover {
+    background: white;
+    color: var(--brand);
+}
+
+ /* ===================
+    get-in-touch css ends 
+ =================== */
+
+
+#footer {
+    width: 100%;
+    height: 260px;
+    background: #353535;
+    margin-top: 100px;
+}
+
+#footer .footer-content {
+    height: 260px;
+}
+
+#footer .footer-content .footer-logo {
+    width: 100%;
+    height: 105px;
+    text-align: center;
+}
+
+#footer .footer-content .footer-logo img {
+    width: 230px;
+    padding-top: 28px;
+}
+
+#footer .footer-content .footer-social {
+    width: 100%;
+    height: 80px;
+}
+
+#footer .footer-content .footer-social ul {
+    line-height: 88px;
+    display: flex;
+    justify-content: center;
+}
+
+#footer .footer-content .footer-social ul li {
+    margin-right: 10px;
+}
+
+#footer .footer-content .footer-social ul li a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #f1f1f1;
+    border-radius: 50%;
+    color: var(--headingcolor);
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    transition: all linear .3s;
+}
+
+#footer .footer-content .footer-social ul li:hover a {
+    color: white;
+    background: #1da1f2;
+}
+
+#footer .footer-content .footer-copy {
+    width: 100%;
+    height: 75px;
+    text-align: center;
+}
+
+#footer .footer-content .footer-copy p {
+    font-size: 14px;
+    color: white;
+    line-height: 50px;
+}
+
+#footer .footer-content .footer-copy p span {
+    color: var(--brand);
+}
+
+ /* ===================
+    footer css ends 
+ =================== */
